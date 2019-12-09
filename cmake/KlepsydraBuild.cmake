@@ -20,6 +20,13 @@ macro (add_zmq_export_target)
    set (ZMQ_EXPORT_TARGETS ${ZMQ_EXPORT_TARGETS} PARENT_SCOPE)
 endmacro()
 
+macro (add_rtps_export_target)
+   foreach (EXPORT_TARGET ${ARGN})
+      list (APPEND RTPS_EXPORT_TARGETS "${EXPORT_TARGET}")
+   endforeach()
+   set (RTPS_EXPORT_TARGETS ${RTPS_EXPORT_TARGETS} PARENT_SCOPE)
+endmacro()
+
 # Add all include dirs to the build-tree export set
 macro (add_include_dirs)
    foreach (INCLUDE_DIR ${ARGN})
