@@ -6,6 +6,13 @@ macro (add_core_export_target)
    set (CORE_EXPORT_TARGETS ${CORE_EXPORT_TARGETS} PARENT_SCOPE)
 endmacro()
 
+macro (add_csp_export_target)
+   foreach (EXPORT_TARGET ${ARGN})
+      list (APPEND CSP_EXPORT_TARGETS "${EXPORT_TARGET}")
+   endforeach()
+   set (CSP_EXPORT_TARGETS ${CSP_EXPORT_TARGETS} PARENT_SCOPE)
+endmacro()
+
 macro (add_dds_export_target)
    foreach (EXPORT_TARGET ${ARGN})
       list (APPEND DDS_EXPORT_TARGETS "${EXPORT_TARGET}")
