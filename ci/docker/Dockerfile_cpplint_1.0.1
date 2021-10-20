@@ -11,8 +11,17 @@ RUN apt-get -y update && \
     build-essential \
     clang-format-11 \
     cmake \
+    cppcheck \
+    doxygen \
+    doxygen-doc \
+    gcovr \
     git \
+    graphviz \
+    lcov \
+    locales \
     locales-all \
+    pkg-config \
+    python3-pip \
     tzdata && \
     update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-11 100 && \
     ## Cleanup
