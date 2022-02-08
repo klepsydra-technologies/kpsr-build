@@ -8,7 +8,7 @@ if(CLANG_FORMAT)
   file(GLOB_RECURSE ALL_SOURCE_FILES ${CLANG_FORMAT_CXX_FILE_EXTENSIONS})
 
   # Don't include some common build folders
-  set(CLANG_FORMAT_EXCLUDE_PATTERNS ${CLANG_FORMAT_EXCLUDE_PATTERNS} "/CMakeFiles/" "cmake" "thirdparties" "code_generator/kpsr_codegen/templates")
+  set(CLANG_FORMAT_EXCLUDE_PATTERNS ${CLANG_FORMAT_EXCLUDE_PATTERNS} "/CMakeFiles/" "cmake" "thirdparties" "code_generator/kpsr_codegen/templates" "code_generator/build" "gen" "/kidl/")
 
   # Get all project files file
   foreach (SOURCE_FILE ${ALL_SOURCE_FILES})
