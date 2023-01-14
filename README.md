@@ -56,9 +56,9 @@ Clone and install YAML-CPP:
 
 # License
 
-&copy; Copyright 2019-2020, Klepsydra Technologies, all rights reserved. Licensed under the terms in [LICENSE.md](./LICENSE.md)
+&copy; 2023 Klepsydra Technologies AG, all rights reserved. Licensed under the terms in [LICENSE.md](./LICENSE.md)
 
-This software and documentation are Copyright 2019-2020, Klepsydra Technologies
+This software and documentation are 2023 Klepsydra Technologies AG
 Limited and its licensees. All rights reserved. See [license file](./LICENSE.md) for full copyright notice and license terms.
 
 # Contact
