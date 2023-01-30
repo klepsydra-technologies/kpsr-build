@@ -64,7 +64,7 @@ macro(get_kpsr_version REPO_VERSION VERSION_FILENAME)
                             ${REPO_VERSION}_SHA1_SHORT
                             "${${REPO_VERSION}_SHA1}")
                 string(APPEND ${REPO_VERSION} "-" ${${REPO_VERSION}_SHA1_SHORT})
-                string(APPEND ${${REPO_VERSION}_PATCH_EXT} "-"
+                string(APPEND ${REPO_VERSION}_PATCH_EXT "-"
                        ${${REPO_VERSION}_SHA1_SHORT})
             endif()
         else()
