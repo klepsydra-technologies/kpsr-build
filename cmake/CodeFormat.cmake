@@ -79,9 +79,7 @@ if(CMAKE_CODE_FORMAT)
         "/kidl/"
         "CodeCoverage.cmake"
         "CppcheckTargets.cmake"
-        "Findcppcheck.cmake"
-        "Findlog4cpp.cmake"
-        "FindRTIConnextDDS.cmake")
+        "Findcppcheck.cmake")
 
     if(NOT ${CMAKE_PROJECT_NAME} MATCHES "kp[e|sr]-build")
         set(CMAKE_FORMAT_EXCLUDE_PATTERNS ${CMAKE_FORMAT_EXCLUDE_PATTERNS}

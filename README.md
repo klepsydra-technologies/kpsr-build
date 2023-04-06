@@ -13,7 +13,6 @@
 * Pistache (<https://github.com/klepsydra-technologies/pistache>)
 * ROS Indigo or above (optional)
 * ZMQ 3 or above (optional)
-* DDS (optional)
 * YAML-CPP (optional)
 * Cmake 3.5.1 or above
 * gcc for C++11 5.4.0 or above.
