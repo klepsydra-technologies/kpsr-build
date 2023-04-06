@@ -31,15 +31,6 @@ macro(add_csp_export_target)
         PARENT_SCOPE)
 endmacro()
 
-macro(add_dds_export_target)
-    foreach(EXPORT_TARGET ${ARGN})
-        list(APPEND DDS_EXPORT_TARGETS "${EXPORT_TARGET}")
-    endforeach()
-    set(DDS_EXPORT_TARGETS
-        ${DDS_EXPORT_TARGETS}
-        PARENT_SCOPE)
-endmacro()
-
 macro(add_zmq_export_target)
     foreach(EXPORT_TARGET ${ARGN})
         list(APPEND ZMQ_EXPORT_TARGETS "${EXPORT_TARGET}")
