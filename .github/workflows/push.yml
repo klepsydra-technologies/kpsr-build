@@ -1,0 +1,54 @@
+# Copyright 2023 Klepsydra Technologies AG
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Projects check
+
+on:
+  push:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  projectsbuild:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: kpsr-sdk
+    name: Check ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/klepsydra-technologies/kpsrbase:1.0.0
+    steps:
+      - name: Clone ${{ matrix.name }}
+        uses: actions/checkout@v4
+        with:
+          repository: klepsydra-technologies/${{ matrix.name }}
+          ref: main
+          fetch-depth: 0
+          submodules: recursive
+          path: ${{ matrix.name }}
+
+      - name: Build ${{ matrix.name }}
+        run: |
+          cd kpsr-build/
+          git checkout ${GITHUB_SHA}
+          git log -1
+          cd ../
+          mkdir build && cd build/
+          cmake ..
+          make -j$(nproc)
+        working-directory: ${{ matrix.name }}

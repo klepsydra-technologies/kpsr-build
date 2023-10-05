@@ -14,7 +14,7 @@
 
 option(KPSR_ENABLE_EXAMPLES "Enable building and installing examples" OFF)
 
-if(MINIMAL_BUILD)
+if(MINIMAL_BUILD OR KPSR_PRODUCTION)
     option(KPSR_ENABLE_TESTS "Enable tests" OFF)
 else()
     option(KPSR_ENABLE_TESTS "Enable tests" ON)
