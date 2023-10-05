@@ -1,0 +1,8 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    reviewers:
+      - "klepsydra-technologies/cicd_core"
+    schedule:
+      interval: "weekly"

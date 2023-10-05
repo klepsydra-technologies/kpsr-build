@@ -12,13 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+include(SetCxxStandard)
+set_cxx_standard(11)
 
-# Main header: Project name & Configuration
-# ------------------------------------------------------------------------------------------------------
-cmake_minimum_required(VERSION 3.12)
-
-project("kpsr-build")
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-
-# Code format support
-include(CodeFormat)
+set(KPSR_COMPILE_SPDLOG
+        true
+        CACHE BOOL "Compile spdlog as lib or use header only version")

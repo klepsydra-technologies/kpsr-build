@@ -1,5 +1,5 @@
 build/**
 **/build
-kpsr_ros/**
-**/kpsr_ros
 *~
+.vscode
+.idea

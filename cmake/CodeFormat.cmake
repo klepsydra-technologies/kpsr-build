@@ -29,8 +29,8 @@ if(CLANG_FORMAT)
         "code_generator"
         "kpsr-build"
         "kpe-build"
-        "gen"
-        "kidl")
+        "gen/"
+        "kidl/")
 
     # Get all project files file
     foreach(SOURCE_FILE ${ALL_SOURCE_FILES})
