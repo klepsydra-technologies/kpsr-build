@@ -42,9 +42,11 @@ jobs:
           mkdir build && cd build/
           cmake ..
           make cmake-format-check
+          cd .. && rm -rf build
 
       - name: Checks clang format
         run: |
           mkdir build && cd build/
           cmake ..
           make formatcheck
+          cd .. && rm -rf build

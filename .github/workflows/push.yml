@@ -52,3 +52,7 @@ jobs:
           cmake ..
           make -j$(nproc)
         working-directory: ${{ matrix.name }}
+
+      - name: Workspace cleanup
+        run: |
+          sudo rm -rf ${GITHUB_WORKSPACE}/build
