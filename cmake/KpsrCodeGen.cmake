@@ -20,17 +20,16 @@ macro(
     outputDir
     includePath
     disableRos
-    disableZmq
-    disableDds)
+    disableZmq)
     find_package(Python3 REQUIRED COMPONENTS Interpreter)
     message(
         STATUS
-            "Running code generator: \n${Python3_EXECUTABLE} -m kpsr_codegen -i ${inputDir} -o ${outputDir} -p ${includePath} -r ${disableRos} -z ${disableZmq} -d ${disableDds}\n"
+            "Running code generator: \n${Python3_EXECUTABLE} -m kpsr_codegen -i ${inputDir} -o ${outputDir} -p ${includePath} -r ${disableRos} -z ${disableZmq}\n"
     )
     execute_process(
         COMMAND
             ${Python3_EXECUTABLE} -m kpsr_codegen -i ${inputDir} -o ${outputDir}
-            -p ${includePath} -r ${disableRos} -z ${disableZmq} -d ${disableDds}
+            -p ${includePath} -r ${disableRos} -z ${disableZmq} 
         RESULT_VARIABLE resVar
         OUTPUT_VARIABLE outVar)
     if(resVar)
