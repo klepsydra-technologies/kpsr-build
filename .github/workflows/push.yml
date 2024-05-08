@@ -45,6 +45,7 @@ jobs:
       - name: Build ${{ matrix.name }}
         run: |
           cd kpsr-build/
+          git fetch origin
           git checkout ${GITHUB_SHA}
           git log -1
           cd ../
